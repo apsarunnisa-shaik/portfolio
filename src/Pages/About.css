@@ -1,0 +1,22 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+.styled-button{
+    width: 15vw;
+}
+
+.about-btns{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 435px) {
+    .about-btns{
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+}
