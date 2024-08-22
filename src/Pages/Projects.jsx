@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { projects } from '../Components/projectsData';
 import "./Projects.css";

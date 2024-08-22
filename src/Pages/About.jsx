@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 import "./About.css";
 import "./btn.css";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
