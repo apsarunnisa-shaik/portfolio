@@ -8,10 +8,16 @@ const Footer = () => {
 
   const showAlert = (text) => {
     setAlertText(text);
-    setTimeout(() => {
-      setAlertText('');
-    }, 3000);
   };
+
+  const hideAlert = () => {
+    setAlertText('');
+  };
+
+  // Use import.meta.env to access environment variables in Vite
+  const linkedInUrl = import.meta.env.VITE_LINKEDIN_URL || '';
+  const githubUrl = import.meta.env.VITE_GITHUB_URL || '';
+  const resumeUrl = import.meta.env.VITE_RESUME_URL || '#';
 
   return (
     <footer>
@@ -20,8 +26,14 @@ const Footer = () => {
         <div 
           className="icon-container" 
           onMouseEnter={() => showAlert('Download my resume')}
+          onMouseLeave={hideAlert}
         >
-          <a className="footer-icon-text" href="https://drive.google.com/file/d/1raZYOSME-kOuq6mLgik34Pr-MBR9njih/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <a 
+            className="footer-icon-text" 
+            href={resumeUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <FileDownloadIcon className='footer-icon' />
             Resume
           </a>
@@ -29,8 +41,14 @@ const Footer = () => {
         <div 
           className="icon-container" 
           onMouseEnter={() => showAlert('Visit my LinkedIn profile')}
+          onMouseLeave={hideAlert}
         >
-          <a className="footer-icon-text" href="https://www.linkedin.com/in/apsarunnisa" target="_blank" rel="noopener noreferrer">
+          <a 
+            className="footer-icon-text" 
+            href={linkedInUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <LinkedInIcon className='footer-icon' />
             LinkedIn
           </a>
@@ -38,8 +56,14 @@ const Footer = () => {
         <div 
           className="icon-container" 
           onMouseEnter={() => showAlert('Check out my GitHub')}
+          onMouseLeave={hideAlert}
         >
-          <a className="footer-icon-text" href="https://github.com/apsarunnisa-shaik" target="_blank" rel="noopener noreferrer">
+          <a 
+            className="footer-icon-text" 
+            href={githubUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
             <GitHubIcon className='footer-icon' />
             GitHub
           </a>

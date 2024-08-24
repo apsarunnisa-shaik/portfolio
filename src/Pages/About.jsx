@@ -31,11 +31,12 @@ const About = () => {
             <br></br>
 
             <button className="styled-button">
-              <Link to="/projects" className='btn-text'> Projects <DoubleArrowIcon /> </Link>
+              <Link to="/education" className='btn-text'> Education <DoubleArrowIcon /> </Link>
             </button>
           </div>
         </div>
       </main>
+      <br></br>
       <Footer />
     </div>
   );
